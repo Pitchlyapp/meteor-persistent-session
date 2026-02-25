@@ -7,7 +7,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom(['0.9.1', '3.0']),
-  api.use(['jquery', 'amplify', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
+  api.use(['jquery', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
   // If `accounts-base` is loaded, we have to make sure that this package is
   // loaded after `accounts-base` is, so we specify `weak: true` here
   api.use('accounts-base', { weak: true });
@@ -17,7 +17,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function (api) {
   api.use("tinytest");
-  api.use("amplify");
   api.use("random");
   api.use("underscore");
   api.use("reactive-dict"); // we only need this exposed for testing
